@@ -35,6 +35,7 @@
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../Source/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../apSource/app-assets/css/pages/widgets.css">
     <!-- END: Custom CSS-->
 
 </head>
@@ -193,7 +194,7 @@
                 </li>
                 <li class=" navigation-header"><span>INTERNO</span>
                 </li>
-                <li class=" nav-item"><a href="personal.php"><i class="bx bxs-contact"></i><span class="menu-title">Personal</span></a>
+                <li class=" nav-item active"><a href="#"><i class="bx bxs-contact"></i><span class="menu-title">Personal</span></a>
                 </li>
                 <li class=" nav-item"><a href="plan.php"><i class="bx bxs-component"></i><span class="menu-title">Plan / paquete</span></a>
                 </li>
@@ -218,8 +219,240 @@
     </div>
     <!-- END: Main Menu-->
 
-
-    <!-- ****************************************************************************************************************************************************************************** -->
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-12 mb-2 mt-1">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h5 class="content-header-title float-left pr-1 mb-0">Personal</h5>
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb p-0 mb-0">
+                                    <li class="breadcrumb-item"><a href="tablero.php"><i class="bx bx-home-alt"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="tablero.php">Tablero</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Personal
+                                    </li>
+                                    <li>
+                                        <button type="button" style="margin-top:-5px; margin-left:20px" class="btn btn-icon rounded-circle btn-success" data-toggle="modal" data-target="#personalCrear"><i class="bx bxs-user-plus"></i></button>
+                                    </li>
+                                    <li>
+                                        <input type="text" style="margin-top:-5px; margin-left:20px" id="roundText" class="form-control round" placeholder="Busquemos por nombre ">
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Crear nuevo personal -->
+            <div class="modal fade text-left" id="personalCrear" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title white" id="myModalLabel33">Nuevo Usuario</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="bx bx-x"></i>
+                            </button>
+                        </div>
+                        <form action="#">
+                            <div class="modal-body text-center">
+                                <label>Nombre de Usuario </label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Escriba el motivo principal" class="form-control">
+                                </div>
+                                <label>Apellido </label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Escriba una descripcion" class="form-control">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-light-secondary" data-dismiss="modal">
+                                    <i class="bx bx-x d-block d-sm-none"></i>
+                                    <span class="d-none d-sm-block">Cerrar</span>
+                                </button>
+                                <button type="button" class="btn btn-info ml-1" data-dismiss="modal">
+                                    <i class="bx bx-check d-block d-sm-none"></i>
+                                    <span class="d-none d-sm-block">Crear</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <div class="row">
+                    <!-- User Widget Starts -->
+                    <div class="col-xl-3 col-md-6 col-12 user-profile-card"><br><br><br>
+                        <div class="card">
+                            <div class="card-header mx-auto pt-3">
+                                <div class="avatar bg-rgba-primary p-100" style="margin-top:-110px">
+                                    <img class="img-fluid" src="../Source/img/mujer.png" alt="img placeholder" height="134" width="134">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body text-center">
+                                    <h4>Scarleth Cabezas Vargas</h4>
+                                    <p>Empleado (a)</p>
+                                    <!-- <p class="px-1">Jelly beans halvah cake chocolate gummies.</p> -->
+                                    <div class="d-flex justify-content-around mb-1">
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-camera font-medium-5 font-weight-bold'></i>
+                                            <p>5693</p>
+                                        </div>
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-heart font-medium-5 font-weight-bold'></i>
+                                            <p>856</p>
+                                        </div>
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-user font-medium-5 font-weight-bold'></i>
+                                            <p>468</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-success glow px-4">Editar</button>
+                                    <button type="button" class="btn btn-secondary glow px-4">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 user-profile-card"><br><br><br>
+                        <div class="card">
+                            <div class="card-header mx-auto pt-3">
+                                <div class="avatar bg-rgba-primary p-100" style="margin-top:-110px">
+                                    <img class="img-fluid" src="../Source/img/mujer.png" alt="img placeholder" height="134" width="134">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body text-center">
+                                    <h4>Wara Laime</h4>
+                                    <p>Secretario (a)</p>
+                                    <!-- <p class="px-1">Jelly beans halvah cake chocolate gummies.</p> -->
+                                    <div class="d-flex justify-content-around mb-1">
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-camera font-medium-5 font-weight-bold'></i>
+                                            <p>5693</p>
+                                        </div>
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-heart font-medium-5 font-weight-bold'></i>
+                                            <p>856</p>
+                                        </div>
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-user font-medium-5 font-weight-bold'></i>
+                                            <p>468</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-success glow px-4">Editar</button>
+                                    <button type="button" class="btn btn-secondary glow px-4">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 user-profile-card"><br><br><br>
+                        <div class="card">
+                            <div class="card-header mx-auto pt-3">
+                                <div class="avatar bg-rgba-primary p-100" style="margin-top:-110px">
+                                    <img class="img-fluid" src="../Source/img/mujer.png" alt="img placeholder" height="134" width="134">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body text-center">
+                                    <h4>Luz Sarzuri Vega</h4>
+                                    <p>Empleado (a)</p>
+                                    <!-- <p class="px-1">Jelly beans halvah cake chocolate gummies.</p> -->
+                                    <div class="d-flex justify-content-around mb-1">
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-camera font-medium-5 font-weight-bold'></i>
+                                            <p>5693</p>
+                                        </div>
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-heart font-medium-5 font-weight-bold'></i>
+                                            <p>856</p>
+                                        </div>
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-user font-medium-5 font-weight-bold'></i>
+                                            <p>468</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-success glow px-4">Editar</button>
+                                    <button type="button" class="btn btn-secondary glow px-4">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 user-profile-card"><br><br><br>
+                        <div class="card">
+                            <div class="card-header mx-auto pt-3">
+                                <div class="avatar bg-rgba-primary p-100" style="margin-top:-110px">
+                                    <img class="img-fluid" src="../Source/img/mujer.png" alt="img placeholder" height="134" width="134">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body text-center">
+                                    <h4>Patricia Espinoza Flores</h4>
+                                    <p>Empleado (a)</p>
+                                    <!-- <p class="px-1">Jelly beans halvah cake chocolate gummies.</p> -->
+                                    <div class="d-flex justify-content-around mb-1">
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-camera font-medium-5 font-weight-bold'></i>
+                                            <p>5693</p>
+                                        </div>
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-heart font-medium-5 font-weight-bold'></i>
+                                            <p>856</p>
+                                        </div>
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-user font-medium-5 font-weight-bold'></i>
+                                            <p>468</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-success glow px-4">Editar</button>
+                                    <button type="button" class="btn btn-secondary glow px-4">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 user-profile-card"><br><br><br>
+                        <div class="card">
+                            <div class="card-header mx-auto pt-3">
+                                <div class="avatar bg-rgba-primary p-100" style="margin-top:-110px">
+                                    <img class="img-fluid" src="../Source/img/mujer.png" alt="img placeholder" height="134" width="134">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body text-center">
+                                    <h4>Raquel Cruz Pinto</h4>
+                                    <p>Empleado (a)</p>
+                                    <!-- <p class="px-1">Jelly beans halvah cake chocolate gummies.</p> -->
+                                    <div class="d-flex justify-content-around mb-1">
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-camera font-medium-5 font-weight-bold'></i>
+                                            <p>5693</p>
+                                        </div>
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-heart font-medium-5 font-weight-bold'></i>
+                                            <p>856</p>
+                                        </div>
+                                        <div class="card-icons d-flex flex-column">
+                                            <i class='bx bx-user font-medium-5 font-weight-bold'></i>
+                                            <p>468</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-success glow px-4">Editar</button>
+                                    <button type="button" class="btn btn-secondary glow px-4">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- User Widget Ends -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+                    
 
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
